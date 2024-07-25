@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    width: 1046px;
+    height: 342px;
+    padding: 35px;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#top {
+    height: 48px;
+    width: 100%;
+}
+
+#bottom {
+    height: calc(100% - 48px);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+#left {
+    height: 100%;
+    width: 50%;
+}
+
+#right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+img {
+    margin-top: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+input {
+    width: 96%;
+    border-radius: 4px;
+    padding: 0px 10px;
+    display: block;
+    border: none;
+    height: 56px;
+    border: 1px solid gray;
+}
+
+.btn-grp{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap:10px
+}
+
+.btn-grp > .primary-btn {
+    font-weight: 600;
+    background-color: #0b57d0;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0 24px 0 24px;
+    text-transform: none;
+    transition: border .28s cubic-bezier(.4,0,.2,1), box-shadow .28s cubic-bezier(.4,0,.2,1);
+    box-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    height: 40px;
+    border-style: none;
+
+}
+
+.btn-grp > .secondary-btn {
+    font-weight: 600;
+    background-color: #fff;
+    color: #0b57d0;
+    border-radius: 20px;
+    padding: 0 24px 0 24px;
+    text-transform: none;
+    transition: border .28s cubic-bezier(.4,0,.2,1), box-shadow .28s cubic-bezier(.4,0,.2,1);
+    box-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    height: 40px;
+    border-style: none;
+}
+
+.btn-grp > .secondary-btn:hover {
+    background-color: hsl(217, 90%, 98%);
+    cursor: pointer;
+}
+
+.btn-grp > .primary-btn:hover {
+    background-color: hsl(217, 90%, 38%);
+    cursor: pointer;
+}
+
+.line > p{
+    font-size: small;
+    font-weight: 400;
+}
+
+.secondary-btn{
+    font-weight: 600;
+    background-color: #fff;
+    color: #0b57d0;
+    border-radius: 20px;
+    /* padding: 0 24px 0 24px; */
+    text-transform: none;
+    transition: border .28s cubic-bezier(.4,0,.2,1), box-shadow .28s cubic-bezier(.4,0,.2,1);
+    box-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    /* height: 40px; */
+    border-style: none;
+}
+
+.secondary-btn:hover {
+    background-color: hsl(217, 90%, 98%);
+    cursor: pointer;
+}
+
+.footer{
+    width: 1066px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer > .language{
+    display: flex;
+    width: 200px;
+    align-items: center;
+    gap: 50px;
+    font-weight: 400;
+    font-size: 12px;
+    color: gray;
+}
+
+.footer > .btn-grp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer > .btn-grp > button {
+    font-weight: 600;
+    background-color: #f0f4f9;
+    color: grey;
+    border-radius: 8px;
+    padding: 0 12px;
+    text-transform: none;
+    transition: border .28s cubic-bezier(.4,0,.2,1), box-shadow .28s cubic-bezier(.4,0,.2,1);
+    box-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    height: 30px;
+    border-style: none;
+    font-weight: 400;
+}
+
+.footer > .btn-grp > button:hover{
+    background-color: hsl(0, 0%, 90%);
+    cursor: pointer;
+}
