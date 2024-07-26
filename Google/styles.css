@@ -1,41 +1,62 @@
 body {
-    font-family: Arial, sans-serif;
+    /* set màu nền cho body là #f0f4f9 */
     background-color: #f0f4f9;
+    
+    /* dùng để căn chỉnh các phần tử con trong thẻ body nằm giữa giang vs khoảng cách (gap) giữa các thẻ con là 10px */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+    
+    /* set width height của toàn màn hình là 100vw và 100vh => kích thước của body là fullscreen */
     height: 100vh;
     width: 100vw;
+ 
+    /* set margin và padding của body là 0 */
     margin: 0;
+    padding: 0;
+
+
+    /* set font family của toàn bộ app là Noto Sans */
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
     font-variation-settings:"wdth" 100;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
 }
 
 .card {
+    /* set width và height cho card là 1046 X 342 */
     width: 1046px;
     height: 342px;
+    
+    /* set padding (padding là gì thì phải tự hiểu) cho card là 35px */
     padding: 35px;
+
+    /* set background cho card là màu #fff */
     background-color: #fff;
+
+    /* bo viền card là 30px */
     border-radius: 30px;
+    
+    /* set các phần tử con trong card hiển thị theo chiều column */
     display: flex;
     flex-direction: column;
 }
 
 #top {
+    /* id đánh dấu thẻ chứa logo của gg */
+    /* set height 48px và width 100% */
     height: 48px;
     width: 100%;
 }
 
 #bottom {
+    /* set height = 100% - 48px vì thẻ có id top đã set height là 48px nên height của bottom sẽ là phần còn lại */
     height: calc(100% - 48px);
     width: 100%;
+/* set display flex để căn chỉnh các thẻ con bên trong thẻ #bottom vào giữa */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -43,13 +64,16 @@ body {
 
 
 #left {
+    /* set height bằng với height của thẻ cha #bottom; width của #left = #right */
     height: 100%;
     width: 50%;
 }
 
 #right {
+        /* set height bằng với height của thẻ cha #bottom; width của #right = #left */
     height: 100%;
     width: 50%;
+    /* set display flex để căn chỉnh các thẻ con bên trong hiển thị theo chiều column cộng tạo khoảng trắng cho từng phần tử con bên trong thẻ #right */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -57,6 +81,7 @@ body {
 }
 
 img {
+    /* set thẻ img  có width = height = 50px và bo tròn img với border-radius:50% */
     margin-top: 0px;
     width: 50px;
     height: 50px;
@@ -64,23 +89,30 @@ img {
 }
 
 input {
+    /* set width của input là 96% */
     width: 96%;
+    /* bo viền input là 4px */
     border-radius: 4px;
+    /* set padding cho input là 0px 10px */
     padding: 0px 10px;
-    display: block;
-    border: none;
+    /* set height của input là 56px */
     height: 56px;
+    /* set border của input là 1px solid gray */
     border: 1px solid gray;
 }
 
-.btn-grp{
+.card > #bottom > #right > .btn-grp{
+    /* set width của btn-grp bằng với width của #right với width=100% */
     width: 100%;
+    /* set display flex để căn chỉnh các phần tử con bên trong thẻ btn-grp hiển thị theo chiều row */
     display: flex;
     justify-content: flex-end;
+    /* giãn nở khoảng cách giữa các btn là 10px */
     gap:10px
 }
 
-.btn-grp > .primary-btn {
+.card > #bottom > #right > .btn-grp > .primary-btn {
+    /* style của một nút btn có màu background là primary color */
     font-weight: 600;
     background-color: #0b57d0;
     color: #fff;
@@ -96,7 +128,8 @@ input {
 
 }
 
-.btn-grp > .secondary-btn {
+.card > #bottom > #right >.btn-grp > .secondary-btn {
+     /* style của một nút btn có màu background là secondary color */
     font-weight: 600;
     background-color: #fff;
     color: #0b57d0;
@@ -111,22 +144,27 @@ input {
     border-style: none;
 }
 
-.btn-grp > .secondary-btn:hover {
+.card > #bottom > #right > .btn-grp > .secondary-btn:hover {
+    /* hiệu ứng hover vào nút */
     background-color: hsl(217, 90%, 98%);
     cursor: pointer;
 }
 
-.btn-grp > .primary-btn:hover {
+.card > #bottom > #right  > .btn-grp > .primary-btn:hover {
+    /* hiệu ứng hover vào nút */
     background-color: hsl(217, 90%, 38%);
+    /* hiệu ứng cursor : pointer sẽ tạo cảm giác như người dùng có thể tương tác với thể đó trên giao diện */
     cursor: pointer;
 }
 
 .line > p{
+    /* set màu cho text là gray */
     font-size: small;
     font-weight: 400;
 }
 
 .secondary-btn{
+    /* set style cho secondary-btn khi không nằm trong btn-grp */
     font-weight: 600;
     background-color: #fff;
     color: #0b57d0;
@@ -142,18 +180,25 @@ input {
 }
 
 .secondary-btn:hover {
+    /* hiệu ứng hover vào nút */
     background-color: hsl(217, 90%, 98%);
+    /* hiệu ứng cursor : pointer sẽ tạo cảm giác như người dùng có thể tương tác với thể đó trên giao diện */
     cursor: pointer;
 }
 
 .footer{
+    /* thiết lập style cho footer(phần nằm dưới card) */
     width: 1066px;
+    /* set display:flex để thuẩn tiện chia khoảng trắng cho hai phần tử tiếp theo */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .footer > .language{
+    /* set style cho phần tử language */
+    /* phần tử language nằm bên trái trong .footer */
+    /* display flex để bố cục text và icon nằm ngang thẳng thàng */
     display: flex;
     width: 200px;
     align-items: center;
@@ -164,12 +209,15 @@ input {
 }
 
 .footer > .btn-grp{
+    /* btn-grp nằm bên phải .footer */
+    /* set flex để các phần tử btn bên trong btn-grp có thể nằm ngang thẳng hàng */
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
 .footer > .btn-grp > button {
+    /* style cho button bên trong btn-grp */
     font-weight: 600;
     background-color: #f0f4f9;
     color: grey;
@@ -186,6 +234,8 @@ input {
 }
 
 .footer > .btn-grp > button:hover{
+    /* hiệu ứng hover vào nút */
     background-color: hsl(0, 0%, 90%);
+    /* hiệu ứng cursor : pointer sẽ tạo cảm giác như người dùng có thể tương tác với thể đó trên giao diện */
     cursor: pointer;
 }
